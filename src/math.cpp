@@ -1,4 +1,4 @@
-#include <iostream>
+#include "math.hpp"
 namespace math
 {
     double cubed(double n)
@@ -77,24 +77,4 @@ namespace math
         };
         return n;
     };
-    struct number
-    {
-        int n;
-        void operator!();
-        friend std::ostream &operator<<(std::ostream &out, math::number &n)
-        {
-            out << n.n;
-            return out;
-        };
-    };
-    void math::number::operator!()
-    {
-        for (int i = n; i != 0; i--)
-        {
-            n *= i;
-        };
-        std::cout << n << "\n";
-        return;
-    };
 };
-int main(){};
